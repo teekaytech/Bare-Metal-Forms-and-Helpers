@@ -30,9 +30,9 @@ Since all the code is written using ruby on rails, `Ruby Runtime >= 1.9` and `ra
 
 After cloning on your computer, open the folder using your terminal/command prompt window and run:
 
-`bundle install`
-`rails db:migrate`
-`rails server` to checkout the application
+`bundle install`<br/>
+`rails db:migrate`<br/>
+`rails server` <br/> to checkout the application
 
 ## Authors
 
