@@ -2,18 +2,18 @@
 <%= form_for @user do |f| %>
   <div>
     <%= f.label :username %><br />
-    <%= f.text_field :username, placeholder: 'Input your username'%>
+    <%= f.text_field :username, placeholder: 'Input your username' %>
   </div>
   <div>
     <%= f.label :email %><br />
-    <%= f.email_field :email, placeholder: 'Input your email here'%>
+    <%= f.email_field :email, placeholder: 'Input your email here' %>
   </div>
   <div>
     <%= f.label :password %><br />
-    <%= f.password_field :password, placeholder: 'Please put your password'%>
+    <%= f.password_field :password, placeholder: 'Please put your password' %>
   </div>
   <div> 
-    <%= f.submit "Update"%>
+    <%= f.submit "Update" %>
   </div>
 <% end %>
 
