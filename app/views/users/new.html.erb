@@ -9,12 +9,18 @@
   <input type="password" id="password" name="user[password]"><br>
   <input type="submit" value="Submit">
 </form> %>
-<%= form_tag("/users", method: "POST") do %>
-  <%= label_tag(:username, "Username:") %>
-  <%= text_field_tag(:username) %><br/>
-  <%= label_tag(:email, "Email:") %>
-  <%= email_field_tag(:email) %><br/>
-  <%= label_tag(:password, "Password:") %>
-  <%= password_field_tag(:password) %>
-  <%= submit_tag("Submit") %>
+<%# <%= form_tag("/users", method: "POST") do %>
+  <%# <%= label_tag(:username, "Username:") %>
+  <%# <%= text_field_tag(:username) %><br/>
+  <%# <%= label_tag(:email, "Email:") %>
+  <%# <%= email_field_tag(:email) %><br/>
+  <%# <%= label_tag(:password, "Password:") %>
+  <%# <%= password_field_tag(:password) %>
+  <%# <%= submit_tag("Submit") %>
+<%# <% end %> 
+<%= form_for @user do |f| %>
+  <%= f.text_field :username, placeholder: 'Input your username'%></br>
+  <%= f.email_field :email, placeholder: 'Input your email here'%></br>
+  <%= f.password_field :password, placeholder: 'Please put your password'%></br>
+  <%= f.submit "Submit"%>
 <% end %>
