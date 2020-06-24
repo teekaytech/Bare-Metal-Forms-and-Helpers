@@ -1,7 +1,30 @@
 <h2>Edit user</h2>
 <%= form_for @user do |f| %>
-  <%= f.text_field :username, placeholder: 'Input your username'%></br>
-  <%= f.email_field :email, placeholder: 'Input your email here'%></br>
-  <%= f.password_field :password, placeholder: 'Please put your password'%></br>
-  <%= f.submit "Submit"%>
+  <div>
+    <%= f.label :username %><br />
+    <%= f.text_field :username, placeholder: 'Input your username'%>
+  </div>
+  <div>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, placeholder: 'Input your email here'%>
+  </div>
+  <div>
+    <%= f.label :password %><br />
+    <%= f.password_field :password, placeholder: 'Please put your password'%>
+  </div>
+  <div> 
+    <%= f.submit "Update"%>
+  </div>
+<% end %>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this article from being saved:</h2>
+ 
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
 <% end %>
